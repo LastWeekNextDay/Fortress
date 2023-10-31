@@ -1,12 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    public int ID;
+    private int _ID = -1;
+
     public float BuildabilityPercentage;
     public float MovementModifierPercentage;
+    public int ID
+    {
+        get => _ID;
+        set
+        {
+            if (_ID == -1)
+            {
+                _ID = value;
+            }
+            else
+            {
+                throw new Exception("Cannot change ID of tile after it has been set");
+            }
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
