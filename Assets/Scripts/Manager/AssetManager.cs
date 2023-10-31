@@ -57,7 +57,7 @@ public class AssetManager : MonoBehaviour
         switch (type)
         {
             case TileType.BLANK:
-                return LoadAsset<GameObject>("BlankTile");
+                return LoadAsset<GameObject>("BLANK_TILE");
             default:
                 Debug.LogError("Tile type " + type + " not found!");
                 return null;
