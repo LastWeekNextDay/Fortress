@@ -19,7 +19,7 @@ public class LocalWorld : MonoBehaviour
         else
         {
             Debug.LogError("LocalWorld already exists!");
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 

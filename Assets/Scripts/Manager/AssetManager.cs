@@ -16,7 +16,7 @@ public class AssetManager : MonoBehaviour
         else
         {
             Debug.LogError("AssetManager already exists!");
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
     // Start is called before the first frame update
