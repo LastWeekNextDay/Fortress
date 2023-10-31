@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
+    public int ID;
     public float BuildabilityPercentage;
     public float MovementModifierPercentage;
     // Start is called before the first frame update
