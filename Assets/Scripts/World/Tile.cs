@@ -20,7 +20,7 @@ public class Tile : MonoBehaviour
             }
             else
             {
-                throw new Exception("Cannot change ID of tile after it has been set");
+                Debug.LogError("Cannot change ID of tile after it has been set");
             }
         }
     }
