@@ -32,6 +32,7 @@ public class AssetManager : MonoBehaviour
 
     public T LoadAsset<T>(string name)
     {
+        Debug.Log("Loading asset " + name);
         AsyncOperationHandle<T> handle = Addressables.LoadAssetAsync<T>(name);
         handle.WaitForCompletion();
         return handle.Result;
@@ -39,6 +40,7 @@ public class AssetManager : MonoBehaviour
 
     public GameObject LoadTile(TileType type)
     {
+        Debug.Log("Loading tile " + type);
         switch (type)
         {
             case TileType.BLANK:
