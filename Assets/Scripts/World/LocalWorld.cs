@@ -41,5 +41,22 @@ public class LocalWorld : MonoBehaviour
         TileCountX = sizeX;
         TileCountY = sizeY;
         Tiles = new GameObject[TileCountX, TileCountY];
+        FillTiles();
+    }
+
+    void FillTiles()
+    {
+        Debug.Log("Filling tiles...");
+        int id_counter = 0;
+        for (int x = 0; x < TileCountX; x++)
+        {
+            for (int y = 0; y < TileCountY; y++)
+            {
+                Tiles[x, y] = AssetManager.Instance.Spawn(AssetManager.Instance.LoadTile(TileType.BLANK), new Vector3(x, y, 0));
+                Tiles[x, y].GetComponent<Tile>().ID = id_counter;
+                id_counter++;
+            }
+        }
+    }
     }
 }
