@@ -38,6 +38,7 @@ public class LocalWorld : MonoBehaviour
     public void Initialize(int sizeX, int sizeY)
     {
         Debug.Log("Initializing Local World...");
+        // Next time implemented using LocalWorldInfo instead of sizeX and sizeY
         TileCountX = sizeX;
         TileCountY = sizeY;
         Tiles = new GameObject[TileCountX, TileCountY];
