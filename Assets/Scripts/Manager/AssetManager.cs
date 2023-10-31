@@ -6,6 +6,19 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class AssetManager : MonoBehaviour
 {
+    public static AssetManager Instance;
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Debug.LogError("AssetManager already exists!");
+            Destroy(this);
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {

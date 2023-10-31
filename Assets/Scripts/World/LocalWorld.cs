@@ -4,9 +4,25 @@ using UnityEngine;
 
 public class LocalWorld : MonoBehaviour
 {
+    public static LocalWorld Instance;
+
     public int TileCountX;
     public int TileCountY;
     public GameObject[,] Tiles;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Debug.LogError("LocalWorld already exists!");
+            Destroy(this);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
