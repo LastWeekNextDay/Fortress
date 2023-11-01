@@ -6,5 +6,5 @@ using UnityEngine;
 public class GlobalWorldScriptableObject : ScriptableObject
 {
     public int ID;
-    //public GlobalWorldInfo Info;
+    public GlobalWorldInfo globalWorldInfo;
 }

@@ -11,7 +11,6 @@ public class GameLogic : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(this.gameObject);
         } else
         {
             Debug.LogError("GameLogic already exists!");
@@ -21,7 +20,7 @@ public class GameLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LocalWorld.Instance.Initialize(100, 100);
+        LocalWorldBuilder.Instance.GenerateLocalWorld();
     }
 
     // Update is called once per frame
@@ -29,4 +28,5 @@ public class GameLogic : MonoBehaviour
     {
         
     }
+
 }

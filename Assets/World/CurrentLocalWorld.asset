@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51a2e357a36384046b20ec669ec99170, type: 3}
-  m_Name: GlobalWorld
+  m_Script: {fileID: 11500000, guid: 9eb28a706006be145a4c1d519e96a69f, type: 3}
+  m_Name: CurrentLocalWorld
   m_EditorClassIdentifier: 
   ID: 0

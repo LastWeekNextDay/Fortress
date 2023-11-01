@@ -7,6 +7,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 public class AssetManager : MonoBehaviour
 {
     public static AssetManager Instance;
+    
     private void Awake()
     {
         if (Instance == null)

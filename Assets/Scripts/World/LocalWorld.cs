@@ -35,35 +35,6 @@ public class LocalWorld : MonoBehaviour
         
     }
 
-    public void Initialize(int sizeX, int sizeY)
-    {
-        Debug.Log("Initializing Local World...");
-        // Next time implemented using LocalWorldInfo instead of sizeX and sizeY
-        TileCountX = sizeX;
-        TileCountY = sizeY;
-        Tiles = new GameObject[TileCountX, TileCountY];
-        FillTiles();
-    }
-
-    void FillTiles()
-    {
-        Debug.Log("Filling tiles...");
-        // create an empty gameobject called Tiles and put it under LocalWorld
-        GameObject tiles = new GameObject("Tiles");
-        tiles.transform.parent = this.transform;
-        int id_counter = 0;
-        for (int y = 0; y < TileCountX; y++)
-        {
-            for (int x = 0; x < TileCountY; x++)
-            {
-                Tiles[x, y] = AssetManager.Instance.Spawn(AssetManager.Instance.LoadTile(TileType.BLANK), new Vector3(x, y, 0), tiles.transform);
-                Tiles[x, y].GetComponent<Tile>().ID = id_counter;
-                Tiles[x, y].name = TileType.BLANK.ToString() + id_counter;
-                id_counter++;
-            }
-        }
-    }
-
     public GameObject FindTileByID(int id)
     {
         Debug.Log("Finding tile with ID " + id);

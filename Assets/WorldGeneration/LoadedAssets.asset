@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25bdb0df64981e4c9b2a790c2fe21a3, type: 3}
+  m_Name: LoadedAssets
+  m_EditorClassIdentifier: 
+  BLANK_TILE_PREFAB: {fileID: 7148954579393618050, guid: 5786c3c589ec9334e91f6fa8ed6648f0, type: 3}
