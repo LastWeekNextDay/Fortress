@@ -3,27 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// To create a tile:
+// 1. Add new enum
+// 2. Prefab with different Tile Info [DONT FORGET TO MAKE ADDRESSABLE]
+// 3. Add to LoadedAssetsScriptableObject
+// 4. Add to AssetManager - LoadTile
+// 5. Add to LocalWorldBuilder
+
+
 public class Tile : MonoBehaviour
 {
-    private int _ID = -1;
-
-    public float BuildabilityPercentage;
-    public float MovementModifierPercentage;
-    public int ID
-    {
-        get => _ID;
-        set
-        {
-            if (_ID == -1)
-            {
-                _ID = value;
-            }
-            else
-            {
-                Debug.LogError("Cannot change ID of tile after it has been set");
-            }
-        }
-    }
+    public TileInfo TileInfo;
     // Start is called before the first frame update
     void Start()
     {

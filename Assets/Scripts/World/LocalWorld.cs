@@ -42,7 +42,7 @@ public class LocalWorld : MonoBehaviour
         {
             for (int y = 0; y < TileCountY; y++)
             {
-                if (Tiles[x, y].GetComponent<Tile>().ID == id)
+                if (Tiles[x, y].GetComponent<Tile>().TileInfo.ID == id)
                 {
                     Debug.Log("Found tile with ID " + id);
                     return Tiles[x, y];

@@ -59,6 +59,14 @@ public class AssetManager : MonoBehaviour
         {
             case TileType.BLANK:
                 return LoadAsset<GameObject>("BLANK_TILE");
+            case TileType.DIRT_DARK:
+                return LoadAsset<GameObject>("DARK_DIRT_TILE");
+            case TileType.DEEP_WATER:
+                return LoadAsset<GameObject>("DEEP_WATER_TILE");
+            case TileType.SHALLOW_WATER:
+                return LoadAsset<GameObject>("SHALLOW_WATER_TILE");
+            case TileType.SAND:
+                return LoadAsset<GameObject>("SAND_TILE");
             default:
                 Debug.LogError("Tile type " + type + " not found!");
                 return null;

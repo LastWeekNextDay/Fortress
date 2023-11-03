@@ -22,6 +22,26 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8632549f6ef19e84091492195c200abf
+    m_Address: DARK_DIRT_TILE
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 85afb3f964a97d94a9c1eb4950b1c610
+    m_Address: DEEP_WATER_TILE
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 79c97387e4242a4418a6def827ecf0ad
+    m_Address: SHALLOW_WATER_TILE
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b7a1bb85999fd3f44a6dbf16fae054d0
+    m_Address: SAND_TILE
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: a1d7fe59fa294f64f88d2545d20bcda2, type: 2}
   m_SchemaSet:

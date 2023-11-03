@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class LocalWorldInfo
 {
-
+    public int SizeX;
+    public int SizeY;
 }

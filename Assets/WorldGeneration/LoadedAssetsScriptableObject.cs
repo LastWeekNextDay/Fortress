@@ -6,4 +6,8 @@ using UnityEngine;
 public class LoadedAssetsScriptableObject : ScriptableObject    
 {
     public GameObject BLANK_TILE_PREFAB;
+    public GameObject DARK_DIRT_TILE_PREFAB;
+    public GameObject DEEP_WATER_TILE_PREFAB;
+    public GameObject SHALLOW_WATER_TILE_PREFAB;
+    public GameObject SAND_TILE_PREFAB;
 }

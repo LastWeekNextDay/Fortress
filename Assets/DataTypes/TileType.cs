@@ -1,4 +1,8 @@
 public enum TileType
 {
-    BLANK
+    BLANK,
+    DIRT_DARK,
+    DEEP_WATER,
+    SHALLOW_WATER,
+    SAND
 }

@@ -45,8 +45,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83097a2101f1690459af73882552dd1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BuildabilityPercentage: 100
-  MovementModifierPercentage: 100
+  TileInfo:
+    ID: 0
+    Type: 0
+    PositionX: 0
+    PositionY: 0
+    BuildabilityPercentage: 100
+    MovementModifierPercentage: 100
 --- !u!212 &3579784900029982661
 SpriteRenderer:
   m_ObjectHideFlags: 0
