@@ -7,9 +7,11 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 public class AssetManager : MonoBehaviour
 {
     public static AssetManager Instance;
+    [SerializeField]private LoadedAssetManager _loadedAssetManager;
     
     private void Awake()
     {
+        _loadedAssetManager = new LoadedAssetManager(ScriptableObject.CreateInstance<LoadedAssetsScriptableObject>());
         if (Instance == null)
         {
             Instance = this;
@@ -20,53 +22,39 @@ public class AssetManager : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public GameObject Spawn(GameObject prefab, Vector3 position)
+    public GameObject SpawnObject(GameObject prefab, Vector3 position)
     {
         Debug.Log("Spawning " + prefab.name + " at " + position);
         return Instantiate(prefab, position, prefab.transform.rotation);
     }
 
-    public GameObject Spawn(GameObject prefab, Vector3 position, Transform parent)
+    public GameObject SpawnObject(GameObject prefab, Vector3 position, Transform parent)
     {
         Debug.Log("Spawning " + prefab.name + " at " + position + " with parent " + parent.name);
         return Instantiate(prefab, position, prefab.transform.rotation, parent);
     }
 
-    public T LoadAsset<T>(string name)
+    public GameObject GetTile(TileType type)
     {
-        Debug.Log("Loading asset " + name);
-        AsyncOperationHandle<T> handle = Addressables.LoadAssetAsync<T>(name);
-        handle.WaitForCompletion();
-        return handle.Result;
-    }
-
-    public GameObject LoadTile(TileType type)
-    {
-        Debug.Log("Loading tile " + type);
+        Debug.Log("Getting tile " + type);
+        _loadedAssetManager.LoadTileToMemoryIfNeeded(type);
         switch (type)
         {
             case TileType.BLANK:
-                return LoadAsset<GameObject>("BLANK_TILE");
+                return _loadedAssetManager.loadedAssets.BLANK_TILE;
             case TileType.DIRT_DARK:
-                return LoadAsset<GameObject>("DARK_DIRT_TILE");
+                return _loadedAssetManager.loadedAssets.DARK_DIRT_TILE;
             case TileType.DEEP_WATER:
-                return LoadAsset<GameObject>("DEEP_WATER_TILE");
+                return _loadedAssetManager.loadedAssets.DEEP_WATER_TILE;
             case TileType.SHALLOW_WATER:
-                return LoadAsset<GameObject>("SHALLOW_WATER_TILE");
+                return _loadedAssetManager.loadedAssets.SHALLOW_WATER_TILE;
             case TileType.SAND:
-                return LoadAsset<GameObject>("SAND_TILE");
+                return _loadedAssetManager.loadedAssets.SAND_TILE;
+            case TileType.GRASS:
+                return _loadedAssetManager.loadedAssets.GRASS_TILE;
+            case TileType.STONE:
+                return _loadedAssetManager.loadedAssets.STONE_TILE;
             default:
                 Debug.LogError("Tile type " + type + " not found!");
                 return null;

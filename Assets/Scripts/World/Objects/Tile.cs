@@ -7,8 +7,10 @@ using UnityEngine;
 // 1. Add new enum
 // 2. Prefab with different Tile Info [DONT FORGET TO MAKE ADDRESSABLE]
 // 3. Add to LoadedAssetsScriptableObject
-// 4. Add to AssetManager - LoadTile
-// 5. Add to LocalWorldBuilder
+// 4. Add to AssetManager - GetTile
+// 5. Add to LoadedAssetManager - LoadTileToMemory
+// 6. Add to LoadedAssetManager - LoadTileToMemoryIfNeeded
+// 7. Add to LocalWorldBuilderHelper - GetTileThroughNoiseValue
 
 
 public class Tile : MonoBehaviour

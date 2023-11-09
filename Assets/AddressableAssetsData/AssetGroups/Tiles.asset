@@ -42,6 +42,16 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3a151372b097de4aa4d969de4d2540b
+    m_Address: STONE_TILE
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ed9d3ccc02bffa4fae87149c530b9a3
+    m_Address: GRASS_TILE
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: a1d7fe59fa294f64f88d2545d20bcda2, type: 2}
   m_SchemaSet:
