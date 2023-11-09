@@ -5,8 +5,8 @@ using UnityEngine;
 public class PersistentSessionInformation : MonoBehaviour
 {
     public static PersistentSessionInformation Instance;
-    public int MaxMapSizeX = 100;
-    public int MaxMapSizeY = 100;
+    public int MaxMapSizeX = 250;
+    public int MaxMapSizeY = 250;
     public KeyValuePair<int, LocalWorldInfo> loadedLocalWorld;
 
     private void Awake()

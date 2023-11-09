@@ -33,30 +33,6 @@ public class LocalWorldBuilder : MonoBehaviour
         localWorld.TileCountX = PersistentSessionInformation.Instance.loadedLocalWorld.Value.SizeX;
         localWorld.TileCountY = PersistentSessionInformation.Instance.loadedLocalWorld.Value.SizeY;
         localWorld.Tiles = new GameObject[localWorld.TileCountX, localWorld.TileCountY];
-        FillWorldWithTiles();
-    }
-
-    void FillWorldWithTiles()
-    {
-        Debug.Log("Filling tiles...");
-        LocalWorld localWorld = GameObject.Find("LocalWorld").GetComponent<LocalWorld>();
-        if (LocalWorldBuilderHelper.CheckIfGenerationNeeded())
-        {
-            Debug.Log("Tiles not found. Generating map tiles...");
-            GenerateTiles();
-        }
-        localWorld.Tiles = LocalWorldBuilderHelper.LoadTilesFromFile();
-    }
-
-    private void GenerateTiles()
-    {
-        Debug.Log("Generating tiles...");
-        float[,] noiseValues = LocalWorldBuilderHelper.GenerateLocalMapNoiseValues(0.005f);
-        TileInfo[,] tileInfos = LocalWorldBuilderHelper.ConvertNoiseValuesToTileInfos(noiseValues);
-        if (tileInfos.Length < 1)
-        {
-            throw new Exception("No tiles generated.");
-        }
-        LocalWorldBuilderHelper.SaveTilesToFile(tileInfos);  
+        TileBuilder.FillWorldWithTiles();
     }
 }
